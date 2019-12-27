@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+container {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 80%;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 90%;
+  margin: 0 auto;

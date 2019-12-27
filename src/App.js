@@ -1,32 +1,34 @@
-import React from 'react'
-import './App.css';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Container from './components/Container';
+import React, { Component } from "react";
+import Card from "./components/Card";
+import Container from "./components/Container";
+import Header from "./components/Header";
+import friends from "./Friends.json";
+// import Wrapper from "./components/Wrapper/Wrapper";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    // this.state = {
-    //   faces
-    // }
-  }
-  render(){
+class App extends Component {
+  // Setting this.state.friends to the friends json array
+  state = {
+    friends
+  };
+
+
+
+  // Map over this.state.friends and render a Card component for each friend object
+  render() {
     return (
-      <div>
-        <Navbar />
-        <Header />
-        <Container />
+      <Container>
+      <Header />
+      {this.state.friends.map(friend =>(
 
-        {/* {this.state.faces.map(face => (
-          <Facecard 
-          id= {face.id}
-          image={face.image}
-        
-        />) */}
-        )}
-      </div>
-    )
+        <Card
+        id={friend.id}
+        name={friend.name}
+        image={friend.image}
+        />
+        ))}
+        </Container>
+    );
   }
 }
+
 export default App;
