@@ -1,87 +1,43 @@
 [
     {
       "id": 1,
-      "name": "SpongeBob",
-      "image": "https://vignette.wikia.nocookie.net/spongebobgalaxy/images/0/07/SpongeBob_SquarePants.png/revision/latest?cb=20171228024014",
-      "occupation": "Fry Cook",
-      "location": "A Pineapple Under the Sea"
+      "name": "Trey Anastasio",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Trey-Anastasio_2009.jpg"
     },
     {
       "id": 2,
-      "name": "Mr. Krabs",
-      "image": "https://vignette3.wikia.nocookie.net/vsbattles/images/8/80/Mr._Krabs.png/revision/latest?cb=20150919162131",
-      "occupation": "Restaurant Owner",
-      "location": "A Giant Anchor"
+      "name": "Gordon",
+      "image": "https://jambands.com/wp-content/uploads/2017/08/07-26-17_DPV_1989_Phish_MSG_by_Dave_Vann-1.jpg"
     },
     {
       "id": 3,
-      "name": "Squidward",
-      "image": "https://vignette2.wikia.nocookie.net/fictionalcharacters/images/a/ac/Squidward.png/revision/latest?cb=20131121012626",
-      "occupation": "Cashier",
-      "location": "An Easter Island Head"
+      "name": "Fish",
+      "image": "https://miro.medium.com/max/720/1*DabSucj9QoqiQ4YgMq2WKw.png"
     },
     {
       "id": 4,
-      "name": "Dexter",
-      "image": "https://s-media-cache-ak0.pinimg.com/originals/fe/32/49/fe32495d45283cd6860ae122f0aeaad9.png",
-      "occupation": "Boy Genius",
-      "location": "A Secret Laboratory"
+      "name": "Jerry",
+      "image": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f2/Jerry_Garcia_1968.jpg/170px-Jerry_Garcia_1968.jpg"
     },
     {
       "id": 5,
-      "name": "Courage",
-      "image": "https://vignette4.wikia.nocookie.net/vsbattles/images/3/39/Courage-0.png/revision/latest?cb=20160719055423",
-      "occupation": "A Cowardly Dog",
-      "location": "Nowhere, Kansas"
+      "name": "Weir",
+      "image": "https://pbs.twimg.com/profile_images/866773768286478336/RhUHgRYF.jpg"
     },
     {
       "id": 6,
-      "name": "Doug Funnie",
-      "image": "https://vignette1.wikia.nocookie.net/doug/images/3/3b/Doug001.gif/revision/latest?cb=20110807170511",
-      "occupation": "Student",
-      "location": "Bluffington"
+      "name": "Lesh",
+      "image": "https://cdnph.upi.com/svc/sv/upi/6231445121684/2015/1/deaa30ebfabcaaf53d65505be6563e1b/Grateful-Dead-legend-Phil-Lesh-undergoing-treatment-for-bladder-cancer.jpg"
     },
     {
       "id": 7,
-      "name": "Bugs Bunny",
-      "image": "https://vignette2.wikia.nocookie.net/deathbattlefanon/images/2/2b/Bugs_Bunny.png/revision/latest?cb=20151206010607",
-      "occupation": "Looney Toon",
-      "location": "A Rabbit Burrow"
+      "name": "Bill",
+      "image": "https://www.rhino.com/sites/rhino.com/files/styles/article_image/public/2018-05/Bill_Kreutzmann-GettyImages-882240544.jpg?itok=LJ1-AryV"
     },
     {
       "id": 8,
-      "name": "Johnny Bravo",
-      "image": "http://vignette3.wikia.nocookie.net/p__/images/9/9a/Johnny_Bravo.png/revision/latest?cb=20131031233339&path-prefix=protagonist",
-      "occupation": "Ladies Man",
-      "location": "Aron City"
-    },
-    {
-      "id": 9,
-      "name": "Tommy Pickles",
-      "image": "https://vignette4.wikia.nocookie.net/uncyclopedia/images/e/e4/Tommy_Pickles.png/revision/latest?cb=20110530102641",
-      "occupation": "Adventurer",
-      "location": "California"
-    },
-    {
-      "id": 10,
-      "name": "Rocko",
-      "image": "http://vignette3.wikia.nocookie.net/rockosmodernlife/images/9/9e/Rockos-modern-life-4e582a8f06a41.png/revision/latest?cb=20130522173416",
-      "occupation": "Cashier",
-      "location": "O-Town, California"
-    },
-    {
-      "id": 11,
-      "name": "Captain Planet",
-      "image": "http://vignette2.wikia.nocookie.net/dragon-rap-battles/images/b/b6/Captain_Planet.png/revision/latest?cb=20160911200836",
-      "occupation": "Superhero",
-      "location": "Earth"
-    },
-    {
-      "id": 12,
-      "name": "Ickis",
-      "image": "http://static.tvtropes.org/pmwiki/pub/images/ickis.png",
-      "occupation": "Ahhhh! A Real Monster!",
-      "location": "Under a City Dump"
+      "name": "Pigpen",
+      "image": "https://i0.wp.com/liveforlivemusic.com/wp-content/uploads/2017/06/Screen-Shot-2019-06-16-at-12.31.52-PM.png?fit=1480%2C780&ssl=1"
     }
   ]
   
