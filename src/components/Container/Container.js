@@ -1,11 +1,8 @@
-import React from 'react';
- 
-const Container = props => {
-    return (
-        
-        <div className={`container${props.fluid ? "-fluid" : ""}`} {...props} />
+import React from "react";
+// import "./style.css";
 
-    )
+function Container(props) {
+  return <div className="wrapper">{props.children}</div>;
 }
 
 export default Container;
