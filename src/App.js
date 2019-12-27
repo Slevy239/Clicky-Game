@@ -16,11 +16,13 @@ class App extends Component {
   // Map over this.state.friends and render a Card component for each friend object
   render() {
     return (
-      <Container>
+      <div>
+
       <Navbar />
       <Header />
+        <Container>
       {this.state.friends.map(friend =>(
-
+        
         <Card
         id={friend.id}
         name={friend.name}
@@ -28,6 +30,7 @@ class App extends Component {
         />
         ))}
         </Container>
+        </div>
     );
   }
 }
