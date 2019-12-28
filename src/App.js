@@ -8,16 +8,33 @@ import Navbar from './components/Navbar/Navbar';
 class App extends Component {
 	// Setting this.state.friends to the friends json array
 	state = {
-		friends
+    friends,
+    clickedId: [],
+    score: 0,
+    goal: 10,
 	};
 
-	removeFriend = (id) => {
-		// Filter this.state.friends for friends with an id not equal to the id being removed
-		const friends = this.state.friends.filter((friend) => friend.id !== id);
-		// Set this.state.friends equal to the new friends array
-		this.setState({ friends });
-	};
+  shuffleCard = id =>{
+    console.log("clicked")
+    let clickedId = this.state.clickedId;
 
+    if(clickedId.includes(id)){
+      this.setState({clickedId: [], score: 0,})
+      return;
+    } else{
+      clickedId.push(id);
+      if(clickedId.length === 8) {
+        this.setState({ score: 10, clickedId: []});
+        return
+      }
+      this.setState({ clickedId, score: clickedId.length});
+
+      for (let i = 0; i < friends.length; i++) {
+let j = Math.floor(Math.random() * (i+1));
+[friends[i], friends[j]] = [friends[j], friends[i]];        
+      }
+    }
+  }
 	// Map over this.state.friends and render a Card component for each friend object
 	render() {
 		return (
@@ -27,7 +44,7 @@ class App extends Component {
 				<Container>
 					{this.state.friends.map((friend) => (
             <Card
-            removeFriend = {this.removeFriend}
+            shuffleCard = {this.shuffleCard}
             id={friend.id}
             name={friend.name}
             image={friend.image} 
