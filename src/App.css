@@ -36,7 +36,8 @@
     transform: rotate(360deg);
   }
 }
-container {
+
+.container {
   display: -ms-flexbox;
   display: flex;
   min-height: 80%;
