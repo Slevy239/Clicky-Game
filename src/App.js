@@ -8,47 +8,42 @@ import Navbar from './components/Navbar/Navbar';
 class App extends Component {
 	// Setting this.state.friends to the friends json array
 	state = {
-    friends,
-    clickedId: [],
-    score: 0,
-    goal: 10,
+		friends,
+		clickedId: [],
+		score: 0,
+		goal: 10
 	};
 
-  shuffleCard = id =>{
-    console.log("clicked")
-    let clickedId = this.state.clickedId;
+	shuffleCard = (id) => {
+		console.log('clicked');
+		let clickedId = this.state.clickedId;
 
-    if(clickedId.includes(id)){
-      this.setState({clickedId: [], score: 0,})
-      return;
-    } else{
-      clickedId.push(id);
-      if(clickedId.length === 8) {
-        this.setState({ score: 10, clickedId: []});
-        return
-      }
-      this.setState({ clickedId, score: clickedId.length});
+		if (clickedId.includes(id)) {
+			this.setState({ clickedId: [], score: 0 });
+			return;
+		} else {
+			clickedId.push(id);
+			if (clickedId.length === 8) {
+				this.setState({ score: 10, clickedId: [] });
+				return;
+			}
+			this.setState({ clickedId, score: clickedId.length });
 
-      for (let i = 0; i < friends.length; i++) {
-let j = Math.floor(Math.random() * (i+1));
-[friends[i], friends[j]] = [friends[j], friends[i]];        
-      }
-    }
-  }
+			for (let i = 0; i < friends.length; i++) {
+				let j = Math.floor(Math.random() * (i + 1));
+				[ friends[i], friends[j] ] = [ friends[j], friends[i] ];
+			}
+		}
+	};
 	// Map over this.state.friends and render a Card component for each friend object
 	render() {
 		return (
 			<div>
-				<Navbar />
+				<Navbar total={this.state.score} goal={10} />
 				<Header />
 				<Container>
 					{this.state.friends.map((friend) => (
-            <Card
-            shuffleCard = {this.shuffleCard}
-            id={friend.id}
-            name={friend.name}
-            image={friend.image} 
-            />
+						<Card shuffleCard={this.shuffleCard} id={friend.id} name={friend.name} image={friend.image} />
 					))}
 				</Container>
 			</div>
