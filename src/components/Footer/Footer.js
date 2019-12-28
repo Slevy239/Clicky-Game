@@ -1,18 +1,22 @@
 import React from 'react';
-import './Footer.css'
+import './Footer.css';
 const Footer = (props) => {
-    return (
-        <div className="row footer">
-            <div className="col-6">
-                <h5 className="text-uppercase font-weight-bold">Created by Sam Levy</h5>
-                <p>University of Pennsylvania Coding Bootcamp</p>
-            </div>
-            <hr className="clearfix w-100 d-md-none pb-3"></hr>
-            <div className="footer-copywright text-center py-3">© 2020 Sam Levy
-             <a href="https://github.com/Slevy239"> Github</a>
-            </div>
-        </div>
-    )
-}
+	return (
+		<div className="page-footer font-small cyan darken-3">
+			<div className="container">
+				<div className="row">
+					<div className="col-md-12 py-5">
+						<div className="mb-5 flex-center">
+							<div className="footer-copyright text-center py-3">
+								© 2020 Sam Levy <a href="https://github.com/Slevy239"> Github</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 export default Footer;
+
