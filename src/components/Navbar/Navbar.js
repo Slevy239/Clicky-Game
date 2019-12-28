@@ -5,15 +5,17 @@ const Navbar = (props) => {
 	return (
 		<nav class="navbar navbar-light bg-light">
 			<ul className="navbar-nav">
-				<li className="nav-item">Clicky Game</li>
+				<li className="nav-item"></li>
 			</ul>
 
 			<ul className="navbar-nav">
-				<li className="nav-item">{props.status}</li>
+				<li className="nav-item">Score: {props.total} | Goal: {props.goal} </li>
 			</ul>
+
 			<ul className="navbar-nav">
-				<li className="nav-item">Score: {props.total} </li>
+				<li className="nav-item"></li>
 			</ul>
+			
 		</nav>
 	);
 };

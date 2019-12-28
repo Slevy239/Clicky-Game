@@ -12,20 +12,19 @@ class App extends Component {
 		clickedId: [],
 		score: 0,
 		goal: 10,
-		status: ""
+		status: 'Click an image to begin the game!'
 	};
 
 	shuffleCard = (id) => {
-		console.log('clicked');
 		let clickedId = this.state.clickedId;
 
 		if (clickedId.includes(id)) {
-			this.setState({ clickedId: [], score: 0, status:"click to start"});
+			this.setState({ clickedId: [], score: 0 });
 			return;
 		} else {
 			clickedId.push(id);
-			if (clickedId.length === 10) {
-				this.setState({ score: 10, clickedId: [], status: "You won!" });
+			if (clickedId.length === 2) {
+				this.setState({ score: 2, clickedId: [], status: 'You won!' });
 				return;
 			}
 			this.setState({ clickedId, score: clickedId.length });
@@ -40,8 +39,8 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar total={this.state.score} goal={10} status={this.state.status} />
-				<Header />
+				<Navbar total={this.state.score} goal={10} />
+				<Header status={this.state.status} />
 				<Container>
 					{this.state.friends.map((friend) => (
 						<Card shuffleCard={this.shuffleCard} id={friend.id} name={friend.name} image={friend.image} />
