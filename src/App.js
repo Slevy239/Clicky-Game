@@ -11,7 +11,8 @@ class App extends Component {
 		friends,
 		clickedId: [],
 		score: 0,
-		goal: 10
+		goal: 10,
+		status: ""
 	};
 
 	shuffleCard = (id) => {
@@ -19,12 +20,12 @@ class App extends Component {
 		let clickedId = this.state.clickedId;
 
 		if (clickedId.includes(id)) {
-			this.setState({ clickedId: [], score: 0 });
+			this.setState({ clickedId: [], score: 0, status:"click to start"});
 			return;
 		} else {
 			clickedId.push(id);
-			if (clickedId.length === 8) {
-				this.setState({ score: 10, clickedId: [] });
+			if (clickedId.length === 10) {
+				this.setState({ score: 10, clickedId: [], status: "You won!" });
 				return;
 			}
 			this.setState({ clickedId, score: clickedId.length });
@@ -39,7 +40,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar total={this.state.score} goal={10} />
+				<Navbar total={this.state.score} goal={10} status={this.state.status} />
 				<Header />
 				<Container>
 					{this.state.friends.map((friend) => (
