@@ -4,6 +4,7 @@ import Container from './components/Container';
 import Header from './components/Header';
 import friends from './Friends.json';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer'
 
 class App extends Component {
 	// Setting this.state.friends to the friends json array
@@ -23,8 +24,8 @@ class App extends Component {
 			return;
 		} else {
 			clickedId.push(id);
-			if (clickedId.length === 2) {
-				this.setState({ score: 2, clickedId: [], status: 'You won!' });
+			if (clickedId.length === 10) {
+				this.setState({ score: 10, clickedId: [], status: 'You won!' });
 				return;
 			}
 			this.setState({ clickedId, score: clickedId.length });
@@ -46,6 +47,7 @@ class App extends Component {
 						<Card shuffleCard={this.shuffleCard} id={friend.id} name={friend.name} image={friend.image} />
 					))}
 				</Container>
+				<Footer></Footer>
 			</div>
 		);
 	}
