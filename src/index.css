@@ -14,3 +14,8 @@ code {
 body {
   background-color: black;
  }
+
+ .jumbotron-fluid{
+  padding-top: 0px;
+  padding-bottom: 5px;
+}

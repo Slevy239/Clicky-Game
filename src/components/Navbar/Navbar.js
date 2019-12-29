@@ -3,7 +3,7 @@ import './Navbar.css';
 
 const Navbar = (props) => {
 	return (
-		<nav class="navbar navbar-light bg-light">
+		<nav class="navbar navbar-light">
 			<ul className="navbar-nav">
 				<li className="nav-item"></li>
 			</ul>
