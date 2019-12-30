@@ -11,19 +11,29 @@ class App extends Component {
 	state = {
 		friends,
 		clickedId: [],
+		TopScore: [0],
+		maxScore: 0,
 		score: 0,
 		goal: 10,
 		status: 'Click an image to begin the game!'
 	};
 
+
+	componentDidMount() {
+		this.shuffleCard(this.state.friends)
+	}
+
 	shuffleCard = (id) => {
 		let clickedId = this.state.clickedId;
 
 		if (clickedId.includes(id)) {
-			this.setState({ clickedId: [], score: 0 });
+			let maxScore = Math.max(...this.state.TopScore);
+			let filteredTopScores = this.state.TopScore.filter(num => num >= Math.max(...this.state.TopScore))
+			this.setState({ clickedId: [], score: 0, TopScore: filteredTopScores, maxScore: maxScore });
 			return;
 		} else {
 			clickedId.push(id);
+			this.state.TopScore.push(this.state.clickedId.length);
 			if (clickedId.length === 10) {
 				this.setState({ score: 10, clickedId: [], status: 'You won!' });
 				return;
@@ -40,7 +50,7 @@ class App extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar total={this.state.score} goal={10} />
+				<Navbar total={this.state.score} goal={10} maxScore={this.state.maxScore} />
 				<Header status={this.state.status} />
 				<Container>
 					{this.state.friends.map((friend) => (
