@@ -19,11 +19,9 @@ class App extends Component {
 	}
 
 
-	componentDidMount() {
-		this.shuffleCard(this.state.friends);
-	}
 
-	shuffleCard = (id) => {
+
+	shuffleCard = id => {
 
 		let clickedId = this.state.clickedId;
 
@@ -40,10 +38,9 @@ class App extends Component {
 			this.setState({ friends, clickedId, score: clickedId.length, status: " " });
 
 
-			for (let i = friends.length - 1; i > 0; i++) {
+			for (let i = friends.length - 1; i > 0; i--) {
 				let j = Math.floor(Math.random() * (i + 1));
 				[friends[i], friends[j]] = [friends[j], friends[i]];
-
 			}
 		}
 
