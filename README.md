@@ -1,4 +1,5 @@
 # Clicky Game
+[Deployed] (https://clickgame-2020.herokuapp.com/)
 
 ## Overview
 This application is based on memory games that tracks user's moves and high scores.
